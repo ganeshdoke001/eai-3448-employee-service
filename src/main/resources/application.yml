@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: eai-3448-employee-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/EmployeeDB
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# JPA configuration
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        ddl-auto: update
+        format_sql: true
+server:
+  port: 8092
+
+#eureka client
+#spring.application.name=hotel-service
+#eureka.instance.prefer-Ip-Address=true
+#eureka.client.register-with-eureka=true
+#eureka.client.fetch-registry=true
+#eureka.client.service-url.default-zone=http://localhost:8761/eureka  
